@@ -102,9 +102,8 @@ remove_theme_prompt() {
 
 setup_menu() {
   show_ascii_art
-  local menu=("Dropbox" "Steam" "Docker DBs" "Fingerprint sensor" "Fido2 device" "Back")
+  local menu=("Steam" "Docker DBs" "Fingerprint sensor" "Fido2 device" "Back")
   local commands=(
-    "omarchy-setup-dropbox"
     "omarchy-setup-steam"
     "setup_docker_dbs"
     "omarchy-setup-fingerprint"
