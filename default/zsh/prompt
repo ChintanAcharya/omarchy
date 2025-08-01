@@ -2,14 +2,5 @@
 force_color_prompt=yes
 color_prompt=yes
 
-# Simple prompt with path in the window/pane title and caret for typing line
-# Using zsh-specific prompt expansion
-PS1=$'\uf0a9  '
-
-# Set window title to current directory (zsh format)
-precmd() {
-    print -Pn "\e]0;%~\a"
-}
-
-# Alternative: using PROMPT instead of PS1 (more zsh-idiomatic)
-# PROMPT=$'\uf0a9  '
+# Initialize Starship prompt
+eval "$(starship init zsh)"
