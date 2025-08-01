@@ -120,7 +120,7 @@ setup_docker_dbs() {
 }
 
 open_manual() {
-  setsid chromium --new-window --ozone-platform=wayland --app="https://manuals.omamix.org/2/the-omarchy-manual" >/dev/null 2>&1 &
+  setsid google-chrome-stable --new-window --ozone-platform=wayland --app="https://manuals.omamix.org/2/the-omarchy-manual" >/dev/null 2>&1 &
   clear
 }
 
