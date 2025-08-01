@@ -4,7 +4,7 @@ if [ -z "$OMARCHY_BARE" ]; then
   yay -S --noconfirm --needed \
     gnome-calculator gnome-keyring \
     obsidian-bin obs-studio kdenlive \
-    xournalpp localsend-bin
+    localsend-bin
 
   # Packages known to be flaky or having key signing issues are run one-by-one
   for pkg in pinta zoom; do
