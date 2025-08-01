@@ -1,0 +1,44 @@
+# Zsh key bindings configuration - equivalent to original bash inputrc
+
+# Use emacs keybindings (like bash default)
+bindkey -e
+
+# Enable case-insensitive completion (equivalent to set completion-ignore-case on)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Show completion menu (equivalent to show-all-if-ambiguous and show-all-if-unmodified)
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-prompt ''
+
+# Completion styling (equivalent to colored-stats on and visible-stats on)
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' file-list all
+
+# Arrow keys match what you've typed so far against command history
+# (equivalent to "\e[A": history-search-backward, etc.)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+bindkey '^[[C' forward-char
+bindkey '^[[D' backward-char
+
+# Immediately add trailing slash when autocompleting symlinks to directories
+# (equivalent to set mark-symlinked-directories on)
+setopt AUTO_PARAM_SLASH
+
+# Do not autocomplete hidden files unless pattern begins with dot
+# (equivalent to set match-hidden-files off)
+zstyle ':completion:*' special-dirs false
+
+# Show all completions at once (equivalent to set page-completions off)
+zstyle ':completion:*' list-prompt ''
+
+# Set completion query threshold (equivalent to set completion-query-items 200)
+zstyle ':completion:*' list-max 200
+
+# Be intelligent when autocompleting by looking at text after cursor
+# (equivalent to set skip-completed-text on)
+setopt COMPLETE_IN_WORD
+
+# Enable menu completion and related options
+setopt AUTO_MENU
+setopt ALWAYS_TO_END
