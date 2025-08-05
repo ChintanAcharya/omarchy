@@ -5,4 +5,5 @@ yay -S --noconfirm --needed \
   imagemagick \
   mariadb-libs postgresql-libs \
   github-cli \
-  lazygit lazydocker-bin
+  lazygit lazydocker-bin \
+  google-cloud-sdk google-cloud-cli-gsutil
