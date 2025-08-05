@@ -20,6 +20,8 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 bindkey '^[[C' forward-char
 bindkey '^[[D' backward-char
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 # Immediately add trailing slash when autocompleting symlinks to directories
 # (equivalent to set mark-symlinked-directories on)
